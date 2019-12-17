@@ -349,6 +349,8 @@ type BaseService struct {
 	ExtraBinds []string `yaml:"extra_binds" json:"extraBinds,omitempty"`
 	// this is to provide extra env variable to the docker container running kubernetes service
 	ExtraEnv []string `yaml:"extra_env" json:"extraEnv,omitempty"`
+	// Option to restrict bind addresses to local IPs instead of 0.0.0.0
+	RestrictBindAddresses bool `yaml:"restrict_bind" json:"restrictBind,omitempty"`
 }
 
 type NetworkConfig struct {
